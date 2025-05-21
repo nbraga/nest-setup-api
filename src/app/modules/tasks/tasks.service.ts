@@ -5,17 +5,11 @@ import { PrismaService } from "src/app/infra/prisma/prisma.service";
 @Injectable()
 export class TasksService {
   constructor(private prisma: PrismaService) {}
-  private tasks: Task[] = [
-    {
-      id: "dfskg22351k424kms",
-      name: "task1",
-      description: "description1",
-      isCompleted: false,
-    },
-  ];
 
-  findMany() {
-    return { tasks: this.tasks };
+  async findMany() {
+    const tasks = await this.prisma.task.findMany();
+
+    return { tasks };
   }
 
   findOne(taskId: string) {
@@ -23,7 +17,10 @@ export class TasksService {
     return { id: 1, name: "task1" };
   }
 
-  create(task: { name: string; description: string }) {
+  async create(task: { name: string; description: string }) {
+    /*  await this.prisma.task.create({
+      where
+    }) */
     console.log("taskId", task);
     return { id: 1, name: "task1" };
   }

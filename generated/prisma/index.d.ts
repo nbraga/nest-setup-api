@@ -883,7 +883,7 @@ export namespace Prisma {
     id: string | null
     name: string | null
     description: string | null
-    status: boolean | null
+    isCompleted: boolean | null
     createdAt: Date | null
     updatedAt: Date | null
   }
@@ -892,7 +892,7 @@ export namespace Prisma {
     id: string | null
     name: string | null
     description: string | null
-    status: boolean | null
+    isCompleted: boolean | null
     createdAt: Date | null
     updatedAt: Date | null
   }
@@ -901,7 +901,7 @@ export namespace Prisma {
     id: number
     name: number
     description: number
-    status: number
+    isCompleted: number
     createdAt: number
     updatedAt: number
     _all: number
@@ -912,7 +912,7 @@ export namespace Prisma {
     id?: true
     name?: true
     description?: true
-    status?: true
+    isCompleted?: true
     createdAt?: true
     updatedAt?: true
   }
@@ -921,7 +921,7 @@ export namespace Prisma {
     id?: true
     name?: true
     description?: true
-    status?: true
+    isCompleted?: true
     createdAt?: true
     updatedAt?: true
   }
@@ -930,7 +930,7 @@ export namespace Prisma {
     id?: true
     name?: true
     description?: true
-    status?: true
+    isCompleted?: true
     createdAt?: true
     updatedAt?: true
     _all?: true
@@ -1012,7 +1012,7 @@ export namespace Prisma {
     id: string
     name: string
     description: string
-    status: boolean
+    isCompleted: boolean
     createdAt: Date
     updatedAt: Date
     _count: TaskCountAggregateOutputType | null
@@ -1038,7 +1038,7 @@ export namespace Prisma {
     id?: boolean
     name?: boolean
     description?: boolean
-    status?: boolean
+    isCompleted?: boolean
     createdAt?: boolean
     updatedAt?: boolean
   }, ExtArgs["result"]["task"]>
@@ -1047,7 +1047,7 @@ export namespace Prisma {
     id?: boolean
     name?: boolean
     description?: boolean
-    status?: boolean
+    isCompleted?: boolean
     createdAt?: boolean
     updatedAt?: boolean
   }, ExtArgs["result"]["task"]>
@@ -1056,7 +1056,7 @@ export namespace Prisma {
     id?: boolean
     name?: boolean
     description?: boolean
-    status?: boolean
+    isCompleted?: boolean
     createdAt?: boolean
     updatedAt?: boolean
   }, ExtArgs["result"]["task"]>
@@ -1065,12 +1065,12 @@ export namespace Prisma {
     id?: boolean
     name?: boolean
     description?: boolean
-    status?: boolean
+    isCompleted?: boolean
     createdAt?: boolean
     updatedAt?: boolean
   }
 
-  export type TaskOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "description" | "status" | "createdAt" | "updatedAt", ExtArgs["result"]["task"]>
+  export type TaskOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "description" | "isCompleted" | "createdAt" | "updatedAt", ExtArgs["result"]["task"]>
 
   export type $TaskPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "Task"
@@ -1079,7 +1079,7 @@ export namespace Prisma {
       id: string
       name: string
       description: string
-      status: boolean
+      isCompleted: boolean
       createdAt: Date
       updatedAt: Date
     }, ExtArgs["result"]["task"]>
@@ -1508,7 +1508,7 @@ export namespace Prisma {
     readonly id: FieldRef<"Task", 'String'>
     readonly name: FieldRef<"Task", 'String'>
     readonly description: FieldRef<"Task", 'String'>
-    readonly status: FieldRef<"Task", 'Boolean'>
+    readonly isCompleted: FieldRef<"Task", 'Boolean'>
     readonly createdAt: FieldRef<"Task", 'DateTime'>
     readonly updatedAt: FieldRef<"Task", 'DateTime'>
   }
@@ -1890,7 +1890,7 @@ export namespace Prisma {
     id: 'id',
     name: 'name',
     description: 'description',
-    status: 'status',
+    isCompleted: 'isCompleted',
     createdAt: 'createdAt',
     updatedAt: 'updatedAt'
   };
@@ -1949,7 +1949,7 @@ export namespace Prisma {
     id?: StringFilter<"Task"> | string
     name?: StringFilter<"Task"> | string
     description?: StringFilter<"Task"> | string
-    status?: BoolFilter<"Task"> | boolean
+    isCompleted?: BoolFilter<"Task"> | boolean
     createdAt?: DateTimeFilter<"Task"> | Date | string
     updatedAt?: DateTimeFilter<"Task"> | Date | string
   }
@@ -1958,7 +1958,7 @@ export namespace Prisma {
     id?: SortOrder
     name?: SortOrder
     description?: SortOrder
-    status?: SortOrder
+    isCompleted?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
   }
@@ -1970,7 +1970,7 @@ export namespace Prisma {
     NOT?: TaskWhereInput | TaskWhereInput[]
     name?: StringFilter<"Task"> | string
     description?: StringFilter<"Task"> | string
-    status?: BoolFilter<"Task"> | boolean
+    isCompleted?: BoolFilter<"Task"> | boolean
     createdAt?: DateTimeFilter<"Task"> | Date | string
     updatedAt?: DateTimeFilter<"Task"> | Date | string
   }, "id">
@@ -1979,7 +1979,7 @@ export namespace Prisma {
     id?: SortOrder
     name?: SortOrder
     description?: SortOrder
-    status?: SortOrder
+    isCompleted?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
     _count?: TaskCountOrderByAggregateInput
@@ -1994,7 +1994,7 @@ export namespace Prisma {
     id?: StringWithAggregatesFilter<"Task"> | string
     name?: StringWithAggregatesFilter<"Task"> | string
     description?: StringWithAggregatesFilter<"Task"> | string
-    status?: BoolWithAggregatesFilter<"Task"> | boolean
+    isCompleted?: BoolWithAggregatesFilter<"Task"> | boolean
     createdAt?: DateTimeWithAggregatesFilter<"Task"> | Date | string
     updatedAt?: DateTimeWithAggregatesFilter<"Task"> | Date | string
   }
@@ -2003,7 +2003,7 @@ export namespace Prisma {
     id?: string
     name: string
     description: string
-    status?: boolean
+    isCompleted?: boolean
     createdAt?: Date | string
     updatedAt?: Date | string
   }
@@ -2012,7 +2012,7 @@ export namespace Prisma {
     id?: string
     name: string
     description: string
-    status?: boolean
+    isCompleted?: boolean
     createdAt?: Date | string
     updatedAt?: Date | string
   }
@@ -2021,7 +2021,7 @@ export namespace Prisma {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     description?: StringFieldUpdateOperationsInput | string
-    status?: BoolFieldUpdateOperationsInput | boolean
+    isCompleted?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -2030,7 +2030,7 @@ export namespace Prisma {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     description?: StringFieldUpdateOperationsInput | string
-    status?: BoolFieldUpdateOperationsInput | boolean
+    isCompleted?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -2039,7 +2039,7 @@ export namespace Prisma {
     id?: string
     name: string
     description: string
-    status?: boolean
+    isCompleted?: boolean
     createdAt?: Date | string
     updatedAt?: Date | string
   }
@@ -2048,7 +2048,7 @@ export namespace Prisma {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     description?: StringFieldUpdateOperationsInput | string
-    status?: BoolFieldUpdateOperationsInput | boolean
+    isCompleted?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -2057,7 +2057,7 @@ export namespace Prisma {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     description?: StringFieldUpdateOperationsInput | string
-    status?: BoolFieldUpdateOperationsInput | boolean
+    isCompleted?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -2096,7 +2096,7 @@ export namespace Prisma {
     id?: SortOrder
     name?: SortOrder
     description?: SortOrder
-    status?: SortOrder
+    isCompleted?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
   }
@@ -2105,7 +2105,7 @@ export namespace Prisma {
     id?: SortOrder
     name?: SortOrder
     description?: SortOrder
-    status?: SortOrder
+    isCompleted?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
   }
@@ -2114,7 +2114,7 @@ export namespace Prisma {
     id?: SortOrder
     name?: SortOrder
     description?: SortOrder
-    status?: SortOrder
+    isCompleted?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
   }
